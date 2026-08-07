@@ -1,0 +1,88 @@
+/* ========================================
+   CHRISTIAN MENDOZA PORTFOLIO
+   ======================================== */
+
+:root {
+
+    --bg: #080808;
+    --card: #131313;
+
+    --text: #f5f5f5;
+    --text-secondary: #a5a5a5;
+    --muted: #666666;
+
+    --border: rgba(255,255,255,.08);
+
+    --container: 1200px;
+
+    --radius: 18px;
+
+    --transition: .35s ease;
+
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"Inter",sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+.container{
+
+    width:min(100% - 40px,var(--container));
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:120px 0;
+
+}
