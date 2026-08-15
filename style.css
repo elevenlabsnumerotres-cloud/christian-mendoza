@@ -662,3 +662,59 @@ footer {
         max-width: 180px; 
     }
 } 
+/* ================= FOTO DE PERFIL TAMAÑO COMPLETO ================= */
+
+.visual-card {
+    overflow: hidden; /* Corta la foto para que respete los bordes curvos de la tarjeta */
+    position: relative;
+    border: none; /* Quitamos el borde para que se vea más limpio */
+}
+
+/* Agregamos un degradado oscuro arriba y abajo para que el texto blanco se lea perfecto */
+.visual-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Mantenemos la línea decorativa de adentro por encima de la foto */
+.visual-card::before {
+    z-index: 2; 
+}
+
+/* Hacemos el texto blanco y lo ponemos por encima de la foto */
+.visual-top, .visual-bottom {
+    position: relative;
+    z-index: 2; 
+    color: #ffffff; 
+    font-weight: 600;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}
+
+.visual-center {
+    position: static; 
+}
+
+/* Estiramos la foto a todo el cuadrado */
+.perfil-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%; 
+    border-radius: 0; 
+    object-fit: cover; /* Asegura que la foto no se deforme */
+    z-index: 0; /* La enviamos al fondo */
+    box-shadow: none;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+/* Efecto premium: La foto hace un ligero zoom al pasar el mouse por la tarjeta */
+.visual-card:hover .perfil-img {
+    transform: scale(1.05); 
+}
