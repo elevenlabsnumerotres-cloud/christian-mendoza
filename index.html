@@ -3,74 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Mendoza | Editor de Video e IA</title>
+    <title>Christian Mendoza | Video Editor & AI Content Creator</title>
+    <meta name="description" content="Christian Mendoza — Video Editor especializado en YouTube, Shorts, TikTok, Instagram Reels, publicidad y producción audiovisual con Inteligencia Artificial.">
+    <meta name="author" content="Christian Mendoza">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Animación de fondo -->
-    <canvas id="scroll-sequence"></canvas>
+    <!-- ================= CANVAS (FONDO ANIMADO) ================= -->
+    <canvas id="frameCanvas" class="bg-canvas"></canvas>
+    <div id="loadProgress" class="load-progress">Cargando 0%</div>
 
-    <!-- Contenido de la página -->
-    <div id="content">
-        
-        <section class="hero">
-            <h1>Convierte tu idea en un video <span class="highlight">profesional y viral.</span></h1>
-            <!-- Información extraída de tu CV -->
-            <p>Soy Christian Mendoza, editor de video profesional con más de cuatro años de experiencia desarrollando contenido audiovisual de alto impacto[cite: 1]. Especializado en YouTube, documentales, y automatización de flujos de trabajo con Inteligencia Artificial[cite: 1].</p>
-            
-            <div class="hero-buttons">
-                <!-- Botón de WhatsApp con tu número -->
-                <a href="https://wa.me/573017127512" target="_blank" class="btn-primary">Contáctame y cuéntame tu idea</a>
-                <!-- Botón de Drive -->
-                <a href="https://drive.google.com/drive/u/1/folders/1L-gVeY3lCHIgB97FAA_1NKykJSd_YJVO" target="_blank" class="btn-secondary">Revisa mis trabajos</a>
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">CM<span>.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <a href="https://wa.me/573017127512" target="_blank" class="nav-button">Hablemos</a>
+            <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="availability">
+                    <span class="availability-dot"></span>
+                    Disponible para nuevos proyectos
+                </div>
+                <p class="hero-small">VIDEO EDITOR · AI CONTENT CREATOR</p>
+                <h1>Transformo ideas en <span>videos que conectan.</span></h1>
+                <p class="hero-description">
+                    Soy Christian Mendoza, editor de video especializado en contenido para YouTube, redes sociales, marcas y proyectos audiovisuales utilizando edición profesional e Inteligencia Artificial.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://drive.google.com/drive/folders/1L-gVeY3lCHIgB97FAA_1NKykJSd_YJVO?usp=sharing" target="_blank" class="button button-primary">
+                        Ver mi portafolio <span>↗</span>
+                    </a>
+                    <a href="https://wa.me/573017127512" target="_blank" class="button button-secondary">
+                        Contactarme <span>→</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>4+</strong><span>Años de experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <strong>100+</strong><span>Proyectos audiovisuales</span>
+                    </div>
+                    <div class="stat">
+                        <strong>AI</strong><span>Producción con IA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator"><span></span>Scroll para explorar</div>
+        </section>
+
+        <!-- ================= MARQUEE ================= -->
+        <section class="marquee-section">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>VIDEO EDITING</span><i>✦</i>
+                    <span>YOUTUBE</span><i>✦</i>
+                    <span>SHORT FORM</span><i>✦</i>
+                    <span>AI CONTENT</span><i>✦</i>
+                    <span>STORYTELLING</span><i>✦</i>
+                    <span>VIDEO EDITING</span><i>✦</i>
+                    <span>YOUTUBE</span><i>✦</i>
+                    <span>SHORT FORM</span><i>✦</i>
+                </div>
             </div>
         </section>
 
-        <section class="services">
-            <h2>Lo que hago</h2>
-            <p class="subtitle">Edición directa, moderna y adaptada a lo que funciona actualmente en redes.</p>
+        <!-- ================= SERVICIOS ================= -->
+        <section class="section services" id="servicios">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-label">01 — SERVICIOS</p>
+                    <h2>Edición diseñada para <span>generar impacto.</span></h2>
+                </div>
+                <p class="section-intro">Desde contenido para redes sociales hasta producciones audiovisuales completas, adapto cada proyecto a su objetivo y audiencia.</p>
+            </div>
             <div class="services-grid">
-                <div class="card">
-                    <h3>Videos con IA</h3>
-                    <p>Producción apoyada en herramientas de nueva generación como Google Veo, Kling AI, Grok, ElevenLabs y Midjourney[cite: 1].</p>
+                <article class="service-card reveal">
+                    <span class="service-number">01</span>
+                    <div class="service-icon">▶</div>
+                    <h3>YouTube</h3>
+                    <p>Edición dinámica y storytelling para mantener la atención de tu audiencia y mejorar la experiencia de visualización.</p>
+                    <div class="service-tags"><span>Long Form</span><span>Storytelling</span><span>Retention</span></div>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-number">02</span>
+                    <div class="service-icon">✦</div>
+                    <h3>Short Form</h3>
+                    <p>Shorts, TikTok y Reels diseñados para captar atención rápidamente y convertir ideas en contenido atractivo.</p>
+                    <div class="service-tags"><span>Shorts</span><span>TikTok</span><span>Reels</span></div>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-number">03</span>
+                    <div class="service-icon">◉</div>
+                    <h3>Publicidad</h3>
+                    <p>Videos publicitarios y piezas audiovisuales pensadas para comunicar productos, servicios y propuestas de valor.</p>
+                    <div class="service-tags"><span>Ads</span><span>Brands</span><span>Marketing</span></div>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-number">04</span>
+                    <div class="service-icon">AI</div>
+                    <h3>AI Content</h3>
+                    <p>Integración de Inteligencia Artificial para crear imágenes, videos, voces y recursos audiovisuales únicos.</p>
+                    <div class="service-tags"><span>Generative AI</span><span>Veo</span><span>AI Video</span></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= RESULTADOS ================= -->
+        <section class="section results">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-label">02 — RESULTADOS</p>
+                    <h2>Resultados <span>comprobados.</span></h2>
                 </div>
-                <div class="card">
-                    <h3>Shorts y YouTube</h3>
-                    <p>Videos cortos y largos, narrativa visual, subtítulos dinámicos, ritmo impecable en CapCut y optimización para retención[cite: 1].</p>
+                <p class="section-intro">Ya he trabajado en proyectos con resultados aprobados y videos que han alcanzado cifras importantes de visualización.</p>
+            </div>
+            <div class="results-grid reveal">
+                <div class="result-stat">
+                    <strong>+1.9M</strong>
+                    <p>Vistas alcanzadas en videos editados</p>
+                    <br>
+                    <span>Mi enfoque combina ritmo, claridad, retención visual y adaptación a tendencias.</span>
                 </div>
-                <div class="card">
-                    <h3>Estilo Documental</h3>
-                    <p>Storytelling profundo, diseño de sonido y corrección de color para llevar cada idea a un acabado cinematográfico[cite: 1].</p>
+                <a href="https://youtu.be/TU_LINK_AQUI" target="_blank" class="result-video">
+                    <div class="result-video-thumb" style="background-image: url('resultado.jpg'); background-size: cover; background-position: center;">
+                        <div class="play-circle">▶</div>
+                    </div>
+                    <div class="result-video-info">
+                        <strong>LA HISTORIA CONTINÚA...</strong>
+                        <span>1.8M de visualizaciones hace 1 año</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= SOBRE MI ================= -->
+        <section class="section about" id="sobre-mi">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="visual-card">
+                        <div class="visual-top"><span>CHRISTIAN MENDOZA</span><span>2026</span></div>
+                        <div class="visual-center"><span>CM</span></div>
+                        <div class="visual-bottom"><span>VIDEO EDITOR</span><span>AI CREATOR</span></div>
+                    </div>
+                </div>
+                <div class="about-content reveal">
+                    <p class="section-label">03 — SOBRE MÍ</p>
+                    <h2>Más que editar videos, <span>cuento historias.</span></h2>
+                    <p>Soy Christian Mendoza, Video Editor y AI Content Creator con más de cuatro años de experiencia desarrollando contenido audiovisual para clientes nacionales e internacionales.</p>
+                    <p>Me especializo en contenido viral para YouTube, TikTok, Instagram y campañas publicitarias, combinando edición tradicional con herramientas de Inteligencia Artificial.</p>
+                    <p>Mi objetivo es convertir una idea, un concepto o una grabación en una pieza audiovisual que tenga ritmo, personalidad y propósito.</p>
+                    <div class="about-info">
+                        <div><span>Ubicación</span><strong>Pamplona, Colombia</strong></div>
+                        <div><span>Experiencia</span><strong>4+ años</strong></div>
+                        <div><span>Especialidad</span><strong>Video + AI</strong></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: Resultados Comprobados -->
-        <section class="results">
-            <h2>Resultados comprobados</h2>
-            <p class="subtitle">Ya he trabajado proyectos con resultados aprobados y videos que han alcanzado cifras cercanas a los 2 millones de vistas.</p>
-            
-            <div class="results-grid">
-                <div class="card highlight-card">
-                    <h3 class="big-number">+1.9M</h3>
-                    <h4>Vistas alcanzadas en videos editados</h4>
-                    <p>Mi enfoque combina ritmo, claridad, retención visual y adaptación a tendencias.</p>
+        <!-- ================= ESPECIALIDADES ================= -->
+        <section class="section skills">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-label">04 — ESPECIALIDADES</p>
+                    <h2>Herramientas para <span>crear mejor.</span></h2>
                 </div>
-                <div class="card image-card">
-                    <img src="resultado.jpg" alt="Video con 1.8M de visualizaciones">
-                </div>
+            </div>
+            <div class="skills-list reveal">
+                <div class="skill-item"><span>01</span><strong>Edición de Video Profesional</strong><small>VIDEO EDITING</small></div>
+                <div class="skill-item"><span>02</span><strong>Storytelling</strong><small>STORYTELLING</small></div>
+                <div class="skill-item"><span>03</span><strong>Contenido Viral</strong><small>VIRAL CONTENT</small></div>
+                <div class="skill-item"><span>04</span><strong>Inteligencia Artificial</strong><small>AI PRODUCTION</small></div>
+                <div class="skill-item"><span>05</span><strong>Corrección de Color</strong><small>COLOR GRADING</small></div>
+                <div class="skill-item"><span>06</span><strong>Diseño de Sonido</strong><small>SOUND DESIGN</small></div>
+                <div class="skill-item"><span>07</span><strong>Optimización para YouTube</strong><small>YOUTUBE</small></div>
+                <div class="skill-item"><span>08</span><strong>Producción Audiovisual</strong><small>PRODUCTION</small></div>
+            </div>
+            <div class="ai-tools reveal">
+                <p>AI WORKFLOW</p>
+                <span>Google Veo</span><span>ChatGPT</span><span>Runway</span><span>Midjourney</span><span>Kling AI</span><span>Leonardo AI</span><span>ElevenLabs</span>
             </div>
         </section>
 
-        <section class="contact">
-            <h2>¿Tienes una idea o un canal que quieres mejorar?</h2>
-            <p>Hablemos directo. Cuéntame qué tipo de video necesitas y revisamos cómo llevarlo a un formato más atractivo, profesional y listo para publicar.</p>
-            <a href="https://wa.me/573017127512" target="_blank" class="btn-primary">Contáctame y cuéntame tu idea</a>
+        <!-- ================= PORTAFOLIO ================= -->
+        <section class="portfolio-section" id="portafolio">
+            <div class="portfolio-content reveal">
+                <p class="section-label">05 — PORTAFOLIO</p>
+                <h2>Mira lo que <span>puedo crear.</span></h2>
+                <p>Explora mi selección de trabajos, proyectos audiovisuales y contenido creado para diferentes plataformas y clientes.</p>
+                <a href="https://drive.google.com/drive/folders/1L-gVeY3lCHIgB97FAA_1NKykJSd_YJVO?usp=sharing" target="_blank" class="portfolio-button">
+                    <span>Explorar portafolio</span><strong>↗</strong>
+                </a>
+            </div>
+            <div class="portfolio-decoration">
+                <div class="play-circle">▶</div>
+                <span>SHOWREEL</span>
+            </div>
         </section>
 
-    </div>
+        <!-- ================= CTA ================= -->
+        <section class="cta" id="contacto">
+            <div class="cta-inner reveal">
+                <p class="section-label">07 — CONTACTO</p>
+                <h2>¿Tienes una idea? <span>Hagámosla realidad.</span></h2>
+                <p>Cuéntame sobre tu proyecto y descubramos juntos cómo convertirlo en un video que destaque.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/573017127512" target="_blank" class="button button-primary">
+                        WhatsApp <span>↗</span>
+                    </a>
+                    <a href="mailto:cm716581@gmail.com" class="button button-secondary">
+                        Enviar email <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">CM<span>.</span></a>
+                <p>Video Editor & AI Content Creator.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-contact">
+                <a href="https://wa.me/573017127512" target="_blank">+57 301 712 7512</a>
+                <a href="mailto:cm716581@gmail.com">cm716581@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Christian Mendoza. Todos los derechos reservados.</span>
+            <span>Designed & Edited by Christian Mendoza</span>
+        </div>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/573017127512" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+        <span class="whatsapp-icon">◉</span>
+        <span class="whatsapp-text">Hablemos</span>
+    </a>
 
     <script src="script.js"></script>
 </body>
